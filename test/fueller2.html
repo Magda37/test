@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	
+	<title> Rechnen</title>
+    <meta charset="UTF-8"></meta>
+    <link rel="stylesheet" href="style.css" />
+	<script type="text/javascript">
+	
+
+	function randInt(min,max)
+	{
+		var div = (max - min) + 1
+		var randNum = Math.random()
+		for (var i = 0; i <= div - 1; i++)
+			{
+				if (randNum >= i / div && randNum < (i+1) / div)
+					{return i + min}
+			}
+	}
+	
+		
+		function checkInput(){
+			
+			var ergebnis= document.getElementById('ergebnis').value;
+			
+			if (ergebnis < 0 || ergebnis%1 != 0 || ergebnis == ""){
+				alert("Bitte ganze Zahl eingeben!");
+			} 
+			
+		}
+		
+
+	</script>
+	</style>
+  </head>
+  
+  <body>
+
+    <div class="page">
+        <img src="IWM_Logo.png">
+	
+		
+		<h1>
+			<script type="text/javascript" language="JavaScript">
+
+				document.write(randInt(2,20) + ' * ' + randInt(2,20));
+				
+			</script>
+		</h1>
+			
+		<form>
+			<p class= "welcome">Ergebnis:<br><input name="ergebnis" id="ergebnis" type="text" size="10" maxlength="10" autocomplete="off"></p></br></br>
+			<p class= "welcome"><button type="submit" onclick="checkInput()" class="button">N&auml;chste</button></p> 
+		</form>
+		
+		<script type="text/javascript" language="JavaScript">
+			 document.getElementById('ergebnis').focus();
+			
+		</script>
+		</br></br>
+		
+		
+		
+	</div>
+  </body>
+  
+</html>
+
